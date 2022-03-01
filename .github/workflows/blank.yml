@@ -25,3 +25,4 @@ jobs:
       env:
         webhook_url: "https://webhookgit.kunalsss.repl.co/webhook"
         webhook_secret: "1234"
+        data: '{ "weapon": "hammer", "drink" : "beer" }
