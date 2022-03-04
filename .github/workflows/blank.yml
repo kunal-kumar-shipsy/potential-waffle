@@ -26,3 +26,12 @@ jobs:
         webhook_url: "https://reviewmanager2022.herokuapp.com/review-store"
         webhook_secret: "1234"
         data: '{ "event": "${{github.event.repository}}" }'
+  printJob:    
+    name: Print event
+    runs-on: ubuntu-latest
+    steps:
+    - name: Dump GitHub context
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+      run: |
+        echo "$GITHUB_CONTEXT"
