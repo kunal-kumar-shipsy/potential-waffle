@@ -25,4 +25,4 @@ jobs:
       env:
         webhook_url: "https://reviewmanager2022.herokuapp.com/review-store"
         webhook_secret: "1234"
-        data: '{ "event": "${{github.event}}" }'
+        data: '{ "event": "${{github.event.repository}}" }'
